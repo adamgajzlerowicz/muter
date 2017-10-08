@@ -1,1 +1,1 @@
-# muter
+Chrome plugin allowing to auto mute youtube commercials. After the commercial finished, the volume goes back up.
