@@ -1,14 +1,24 @@
 let mutedBecauseOfCommercial = false;
+let muteButton = undefined;
+let commercialElement = undefined;
 
-const watcher = setInterval(() => {
-    if ($('.ad-interrupting').length) {
+setInterval(() => {
+    try {
+        muteButton = document.getElementsByClassName('ytp-mute-button')[0];
+        commercialElement = document.getElementsByClassName('ad-interrupting')[0]
+    } catch (e) {
+        console.log('no mute button found');
+        return;
+    }
+
+    if (commercialElement) {
         mutedBecauseOfCommercial = true;
-        if ($('.ytp-mute-button[title="Mute"')) {
-            $('.ytp-mute-button[title="Mute"').click();
+        if (muteButton.getAttribute('title') === 'Mute') {
+            muteButton.click();
         }
         return;
     }
-    if (mutedBecauseOfCommercial && $('.ytp-mute-button[title="Unmute"').length){
-        $('.ytp-mute-button[title="Unmute"').click()
+    if (mutedBecauseOfCommercial && muteButton.getAttribute('title') === 'Unmute') {
+        muteButton.click();
     }
-}, 200);
+}, 1000);
