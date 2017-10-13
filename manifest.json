@@ -1,15 +1,23 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
-
   "manifest_version": 2,
-
-  "name": "Youtube muter",
+  "name": "YouMute(r)",
+  "short_name": "YouMute(r)",
   "version": "1.0",
-
+  "default_locale": "en",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "description": "Chrome plugin that automatically mutes youtube commercials. After the commercial finished, the volume goes back up. Thanks to it, casters can still be reworded by youtube, but you don't have to listen to crappy commercials.",
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
-      "js": ["muter.js"]
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "muter.js"
+      ]
     }
   ]
 }

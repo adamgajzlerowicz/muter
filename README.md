@@ -1,1 +1,1 @@
-Chrome plugin allowing to auto mute youtube commercials. After the commercial finished, the volume goes back up.
+Chrome plugin that automatically mutes youtube commercials. After the commercial finished, the volume goes back up. Thanks to it, casters can still be reworded by youtube, but you don't have to listen to crappy commercials.
