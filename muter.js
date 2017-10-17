@@ -27,4 +27,4 @@ setInterval(() => {
         muteButton.click();
         visualElement.style.opacity = "1";
     }
-}, 750); // Catches the ad a bit sooner, nice for quieter videos or loud beginnings.
+}, 750);
